@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_edit_text"
+    android:paddingVertical="8dp"
+    android:paddingHorizontal="8dp"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginBottom="12dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_tourism"
+        android:layout_width="125dp"
+        android:layout_height="90dp"
+        android:contentDescription="content desc"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck"
+        tools:srcCompat="@tools:sample/avatars"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+        <ImageView
+            android:id="@+id/img_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_location_tourism"/>
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Situbondo, Jawa Timur"
+            android:textSize="9sp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/img_location"/>
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <TextView
+            android:id="@+id/tv_tourism_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:text="Taman Nasional Baluran"
+            android:textColor="@color/gray"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toStartOf="@+id/img_favorite"
+            app:layout_constraintStart_toStartOf="@id/constraint_name"
+            app:layout_constraintTop_toTopOf="@id/constraint_name" />
+
+        <ImageView
+            android:id="@+id/img_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_fav_border"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_tourism_name"
+            app:layout_constraintEnd_toEndOf="@id/constraint_name"
+            app:layout_constraintTop_toTopOf="@+id/tv_tourism_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp 5.000 /Visit"
+            android:textSize="9sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:id="@+id/tv_average_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.7"
+            android:textSize="9sp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/img_rating"/>
+        <ImageView
+            android:id="@+id/img_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_rating_recommended"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.fragments.ProfileFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="#EFEDED"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_profile"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp">
+
+            <TextView
+                android:id="@+id/tv_profile_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hello, Bahrul Ulum"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_profile_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_profile_username"
+                android:layout_marginTop="4dp"
+                android:text="belajarkoding97@gmail.com"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/tv_title_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Account"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_account"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:text="Edit Profile"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:clickable="true"
+            android:focusable="true"
+            app:drawableEndCompat="@drawable/ic_arrow" />
+
+        <TextView
+            android:id="@+id/tv_forgot_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_edit_profile"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:text="Forgot Password"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:clickable="true"
+            android:focusable="true"
+            app:drawableEndCompat="@drawable/ic_arrow" />
+
+        <TextView
+            android:id="@+id/tv_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_forgot_password"
+            android:layout_marginTop="16dp"
+            android:drawableEnd="@drawable/ic_logout"
+            android:gravity="center_vertical"
+            android:text="Logout"
+            android:textColor="@color/greenify_red"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_title_general"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_logout"
+            android:layout_marginTop="24dp"
+            android:text="General"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_privacy_police"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_general"
+            android:layout_marginTop="16dp"
+            android:drawableEnd="@drawable/ic_arrow"
+            android:gravity="center_vertical"
+            android:text="@string/privacy_policy"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_application_guide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_privacy_police"
+            android:layout_marginTop="16dp"
+            android:drawableEnd="@drawable/ic_arrow"
+            android:gravity="center_vertical"
+            android:text="Application Guide"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_application_guide"
+            android:layout_marginTop="16dp"
+            android:drawableEnd="@drawable/ic_arrow"
+            android:gravity="center_vertical"
+            android:text="Help"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_help"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:text="Author"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:clickable="true"
+            android:focusable="true"
+            app:drawableEndCompat="@drawable/ic_arrow" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

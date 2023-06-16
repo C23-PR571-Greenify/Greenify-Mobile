@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24sp"
+    tools:context=".ui.activities.RegisterActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.02"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutRegister"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal"
+        tools:layout_editor_absoluteX="24dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/greenivy_logo_text" />
+
+        <TextView
+            android:id="@+id/tv_login_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:text="Register"
+            android:textColor="@color/greenify_green"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/create_your_account_greenify_app"
+            android:textColor="@color/greenify_grey"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/ed_register_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="20dp"
+            android:alpha="1"
+            android:background="@drawable/bg_edit_text"
+            android:fontFamily="sans-serif"
+            android:hint="@string/fullname"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/greenify_grey"
+            android:textColorHint="@color/greenify_grey"
+            android:textSize="16sp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <EditText
+            android:id="@+id/ed_register_username"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="20dp"
+            android:alpha="1"
+            android:background="@drawable/bg_edit_text"
+            android:fontFamily="sans-serif"
+            android:hint="@string/username"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/greenify_grey"
+            android:textColorHint="@color/greenify_grey"
+            android:textSize="16sp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <EditText
+            android:id="@+id/ed_register_email"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="20dp"
+            android:alpha="1"
+            android:background="@drawable/bg_edit_text"
+            android:fontFamily="sans-serif"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/greenify_grey"
+            android:textColorHint="@color/greenify_grey"
+            android:textSize="16sp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <EditText
+            android:id="@+id/ed_register_phone"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="20dp"
+            android:alpha="1"
+            android:background="@drawable/bg_edit_text"
+            android:fontFamily="sans-serif"
+            android:hint="@string/phone"
+            android:minHeight="48dp"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/greenify_grey"
+            android:textColorHint="@color/greenify_grey"
+            android:textSize="16sp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_edit_text">
+
+            <com.rememberdev.greenify.ui.custom.CustomEditTextPassword
+                android:id="@+id/ed_register_password"
+                android:layout_width="0dp"
+                android:layout_height="54dp"
+                android:fontFamily="sans-serif"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:paddingHorizontal="12dp"
+                android:textColor="@color/greenify_grey"
+                android:textColorHint="@color/greenify_grey"
+                android:textSize="16sp"
+                android:background="@color/transparent"
+                app:layout_constraintEnd_toStartOf="@+id/showPassword"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/showPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_hidden_password"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="8dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_edit_text">
+
+            <com.rememberdev.greenify.ui.custom.CustomEditTextPassword
+                android:id="@+id/ed_register_confirm_password"
+                android:layout_width="0dp"
+                android:layout_height="54dp"
+                android:fontFamily="sans-serif"
+                android:hint="@string/confirmPassword"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:paddingHorizontal="12dp"
+                android:textColor="@color/greenify_grey"
+                android:textColorHint="@color/greenify_grey"
+                android:textSize="16sp"
+                android:background="@color/transparent"
+                app:layout_constraintEnd_toStartOf="@+id/showConfirmPassword"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/showConfirmPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_hidden_password"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="8dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.rememberdev.greenify.ui.custom.CustomButton
+            android:id="@+id/action_register"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/register"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/have_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="24dp"
+            android:alpha="1"
+            android:fontFamily="@font/poppins_medium"
+            android:lineSpacingMultiplier="1.2"
+            android:text="Have an account"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/action_to_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:alpha="1"
+            android:fontFamily="@font/poppins_medium"
+            android:lineSpacingMultiplier="1.2"
+            android:text="@string/login"
+            android:textAlignment="center"
+            android:textColor="@color/greenify_green"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

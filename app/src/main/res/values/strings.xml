@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Greenify</string>
+    <string name="title_register">Create account Greenify</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register">Register Now</string>
+    <string name="copyright">Greenify Team | Bangkit 2023</string>
+    <string name="error_password_textfield">Password must be longer than 8 characters!</string>
+    <string name="fullname">Fullname</string>
+    <string name="username">Username</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="title_otp">OTP Verification</string>
+    <string name="otp">We have sent a verification code to the email \nPlease check your email</string>
+    <string name="enter_code">Enter code</string>
+    <string name="veriy">Verify Account</string>
+    <string name="phone">Phone Number</string>
+    <string name="login">Login</string>
+    <string name="welcome_to_greenify_app">Welcome to Greenify App</string>
+    <string name="request_login_or_register">Please login to your account or register to continue use the app..</string>
+    <string name="register_on_board">Register</string>
+    <string name="login_title">Login to Greenify App</string>
+    <string name="otp_not_receive">Didn\'t receive the verification code?</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="resend_otp_description">Enter your email to resend \nthe verification code</string>
+    <string name="send_otp">Send OTP</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="privacy_policy"><![CDATA[Privacy & Policy]]></string>
+    <string name="create_your_account_greenify_app">Create your account Greenify App...</string>
+    <string name="hi_username">Hi! <b>Username</b></string>
+    <string name="content">With the idea of imparting programming knowledge, Mr. Sandeep Jain, an IIT Roorkee alumnus started a dream,
+        GeeksforGeeks. Whether programming excites you or you feel stifled, wondering how to prepare for interview questions or how to ace data structures and algorithms,
+        Our success stories include a lot of students who benefitted in their placements and landed jobs at tech giants. Our vision is to build a gigantic network of geeks and we are only a fraction of it yet.</string>
+</resources>

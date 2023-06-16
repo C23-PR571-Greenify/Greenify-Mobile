@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/constraint_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/constraint_top">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/shapeableImageView"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="#EFEDED"
+                app:shapeAppearance="@style/ShapeAppearanceOverlay.App.CornerSize20Percent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_location" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_home_title_current"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="Current Location"
+            android:textColor="@color/greenify_grey"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@id/relativeLayout_top"
+            app:layout_constraintTop_toTopOf="@+id/relativeLayout_top" />
+
+        <TextView
+            android:id="@+id/tv_home_current_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Situbondo, Jawa Timur"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_home_title_current"
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_title_current" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraints_category"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="16dp">
+
+                <TextView
+                    android:id="@+id/tv_title_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:text="Category"
+                    android:textColor="@color/greenify_green"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@id/constraints_category"
+                    app:layout_constraintTop_toTopOf="@+id/constraints_category" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_home_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="@id/tv_title_category"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title_category"
+                    tools:listitem="@layout/item_category" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/constraints_featured"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:paddingHorizontal="16dp">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_title_featured"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:fontFamily="@font/poppins_semi_bold"-->
+<!--                    android:text="Featured"-->
+<!--                    android:textColor="@color/gray"-->
+<!--                    android:textSize="18sp"-->
+<!--                    app:layout_constraintStart_toStartOf="@id/constraints_featured"-->
+<!--                    app:layout_constraintTop_toTopOf="@+id/constraints_featured" />-->
+
+<!--                <com.google.android.material.imageview.ShapeableImageView-->
+<!--                    android:id="@+id/shapeableImageView2"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="120dp"-->
+<!--                    android:src="@color/greenify_grey_light"-->
+<!--                    app:layout_constraintStart_toStartOf="@id/tv_title_featured"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/tv_title_featured"-->
+<!--                    app:shapeAppearance="@style/ShapeAppearanceOverlay.App.CornerSize20Percent" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_title_tempat_wisata_trending"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:fontFamily="@font/poppins_semi_bold"-->
+<!--                    android:text="Tempat Wisata Trending!"-->
+<!--                    android:textColor="@color/greenify_green"-->
+<!--                    android:textSize="14sp"-->
+<!--                    app:layout_constraintStart_toStartOf="@+id/shapeableImageView2"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/shapeableImageView2" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:fontFamily="@font/poppins_medium"-->
+<!--                    android:text="Learn more about one of the hidden gems of Romblon that is shaped like a hook."-->
+<!--                    android:textColor="@color/greenify_grey"-->
+<!--                    android:textSize="12sp"-->
+<!--                    app:layout_constraintStart_toStartOf="@+id/shapeableImageView2"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/tv_title_tempat_wisata_trending" />-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraints_recommended"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginTop="12dp"
+                android:paddingHorizontal="16dp">
+
+                <TextView
+                    android:id="@+id/tv_title_recommended"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:text="Recommended for You"
+                    android:textColor="@color/gray"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@id/constraints_recommended"
+                    app:layout_constraintTop_toTopOf="@+id/constraints_recommended" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_home_recommended"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal"
+                    app:layout_constraintStart_toStartOf="@id/tv_title_recommended"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title_recommended"
+                    tools:listitem="@layout/item_recommended" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraints_all_tourism"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_marginTop="12dp"
+                android:paddingHorizontal="16dp">
+
+                <TextView
+                    android:id="@+id/tv_title_all_tourism"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:text="All Tourism"
+                    android:textColor="@color/gray"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@id/constraints_all_tourism"
+                    app:layout_constraintTop_toTopOf="@+id/constraints_all_tourism" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_home_all_tourism"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:scrollbars="vertical"
+                    app:layout_constraintStart_toStartOf="@id/tv_title_all_tourism"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title_all_tourism"
+                    tools:listitem="@layout/item_tourism" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_edit_text"
+        app:layout_constraintEnd_toEndOf="@+id/constraint_top"
+        app:layout_constraintStart_toStartOf="@+id/constraint_top"
+        app:layout_constraintTop_toBottomOf="@id/constraint_top" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
